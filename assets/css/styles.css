@@ -1,0 +1,128 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #1b2430;
+	color: #fff;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Parte del código ya está hecho con nesting, sólo te he ayudado con el background y la semántica nesting, tu reto es completar el CSS dentro del nesting ya definido para lograr imitar el maquetado que visualizarte en el video */
+
+/* Mucho éxito y happy code!!! */
+.content_principal {
+	width: 1200px;
+	margin: 10px;
+	.content_header {
+		margin-bottom: 10px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		.box_header {
+			flex: 1;
+			border-radius: 10px;
+			place-content: center;
+			row-gap: 100px;
+			&:nth-child(1) {
+				min-width: 200px;
+			    min-height: 180px;
+				background-color: #1a4d2e;
+			}
+			&:nth-child(2) {
+				min-width: 200px;
+			    min-height: 180px;
+				background-color: #ff9f29;
+			}
+			& p {
+				margin-left: 10px;
+			}
+			& p:nth-last-child(1) {
+				margin-top: 110px;
+			}
+		}
+	}
+	.content_main {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		.content_main-menu {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			flex: 1;
+			.box_menu {
+				place-content: center;
+				flex: 1 1 200px;
+				min-width: 200px;
+				min-height:  180px;
+				border-radius: 10px;
+				&:nth-child(1) {
+					background-color: #774360;
+				}
+				&:nth-child(2) {
+					background-color: #b25068;
+				}
+				&:nth-child(3) {
+					background-color: #e7ab79;
+				}
+				&:nth-child(4) {
+					background-color: #3ab0ff;
+				}
+				&:nth-child(5) {
+					background-color: #3b44f6;
+				}
+				&:nth-child(6) {
+					background-color: #a149fa;
+				}
+				& p {
+					margin-left: 10px;
+				}
+				& p:nth-last-child(1) {
+					margin-top: 110px;
+				}
+				
+			}
+		}
+		.content_siderbar {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			flex: 1;
+			max-width: 400px;
+			border-radius: 10px;
+			min-width: 200px;
+			min-height: 180px;
+			background-color: #4c3a51;
+			& h2{
+				margin: auto;
+			   }
+			   div {
+				 margin: auto;
+			   }
+			button {
+				border-radius: 15px;
+				width: 96%;
+				height: 30px;
+                margin-top: auto;
+				background-color: #1b2430;
+				color: #fff;
+			}
+		}
+	}
+	/* opacity */
+	.box_header,
+	.box_menu,
+	.content_siderbar {
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+/* Aquí utiliza las media querys OJO no son necesarias si manejas correctamente tu flex, pero si se te está complicando puedes usarlas */
